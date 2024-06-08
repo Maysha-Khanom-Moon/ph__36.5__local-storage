@@ -1,5 +1,5 @@
 ### Storage
-##### local storage
+1. ##### local storage
     - uses, pattern information
     - user behaivior
         - suppose ami ekta website a dhuke shopping cart a kono product add korle (without singin). Dekha jabe aita thiki local storage a theke jabe, jodio amr nam a information ta store hocche nah.
@@ -18,6 +18,7 @@
             - localStorage.setItem(key, {key, value, ...})
             - localStorage.getItem(key)
                 - '[object Object]'
+    - local storage only can store the strings
     <br>
 
 ##### how to set and get Objects in local storage
@@ -36,3 +37,9 @@ const person = {name: 'Lal Mia', age: 13, profession: 'painter'}
 - localStorage.setItem('person', personString)
 
 - JSON string to object: JSON.perse(personString)
+
+- Object ----- JSON.stringyfy(object) -----> String ----- JSON.perse(objectString) ------> Object
+<br>
+
+* Local Storage does not works on Local machine, it only works on browser
+* so you js file connect with html file and go live
