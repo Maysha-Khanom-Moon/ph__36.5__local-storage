@@ -8,6 +8,8 @@ const addProduct = () => {
     console.log(product, quantity);
 
     displayProduct(product, quantity)
+
+    saveProductToLocalStorage(product, quantity)
 }
 
 const displayProduct = (product, quantity) => {
@@ -28,3 +30,34 @@ const displayProduct = (product, quantity) => {
  * 
  * Same browser and same device --> one time set and get always until you remove the data
  */
+
+
+const getStoredShoppingCart = () => {
+    const storedCart = localStorage.getItem('cart')
+
+    let cart = {}
+
+    if (storedCart) {
+        cart = JSON.parse(storedCart)
+    }
+
+    return cart
+}
+
+
+const saveProductToLocalStorage = (product, quantity) => {
+    let cart = getStoredShoppingCart()
+
+    if(isNaN(cart[product])) {
+        cart[product] = quantity
+    }
+    else {
+        let i = Number(cart[product]) + Number(quantity)
+        cart[product] = i
+    }
+
+    const cartStringified = JSON.stringify(cart)
+    localStorage.setItem('cart', cartStringified)
+
+    console.log(cart[product]);
+}

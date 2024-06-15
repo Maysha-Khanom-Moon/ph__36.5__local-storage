@@ -43,3 +43,9 @@ const person = {name: 'Lal Mia', age: 13, profession: 'painter'}
 
 * Local Storage does not works on Local machine, it only works on browser
 * so you js file connect with html file and go live
+
+
+##### how we will store user information inside the local storage
+- as a object
+- starting ta hobe as a empty object
+- object ----- JOSN.stringify(object) -----> string ----- JSON.perse(string) -----> object
