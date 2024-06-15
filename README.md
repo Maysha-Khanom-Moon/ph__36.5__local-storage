@@ -49,3 +49,13 @@ const person = {name: 'Lal Mia', age: 13, profession: 'painter'}
 - as a object
 - starting ta hobe as a empty object
 - object ----- JOSN.stringify(object) -----> string ----- JSON.perse(string) -----> object
+
+
+
+#### React JS installation with vite
+1. check npm installed or not?
+    - cmd: npm --version
+
+2. go to vitejs website
+    - [link](https://vitejs.dev/guide/)
+    - npm create vite@latest my-project-react -- --template react
